@@ -9,6 +9,13 @@ import { SearchComponent } from './search/search.component';
 import { CardsComponent } from './cards/cards.component';
 import { QueryComponent } from './query/query.component';
 import { ExtraComponent } from './extra/extra.component';
+import { AllproductsComponent } from './allproducts/allproducts.component';
+import { BirthdaysComponent } from './birthdays/birthdays.component';
+import { BirthdaysofferComponent } from './birthdays/birthdaysoffer/birthdaysoffer.component';
+import { AnnivarsaryComponent } from './annivarsary/annivarsary.component';
+import { AdvertisementComponent } from './advertisement/advertisement.component';
+import { DealsComponent } from './deals/deals.component';
+import { DealsdealComponent } from './deals/dealsdeal/dealsdeal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +25,14 @@ import { ExtraComponent } from './extra/extra.component';
     SearchComponent,
     CardsComponent,
     QueryComponent,
-    ExtraComponent
+    ExtraComponent,
+    AllproductsComponent,
+    BirthdaysComponent,
+    BirthdaysofferComponent,
+    AnnivarsaryComponent,
+    AdvertisementComponent,
+    DealsComponent,
+    DealsdealComponent
   ],
   imports: [
     BrowserModule,

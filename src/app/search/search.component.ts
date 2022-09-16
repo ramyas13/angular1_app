@@ -19,11 +19,16 @@ export class SearchComponent implements OnInit {
 
   @Input('product') //Laptop
   //write
-  set pname(pname:any) //Laptop
+  set pname(pname:any) {//Laptop{}
+  if(pname)
   {
-    this._productname=pname || 'not found';
-  
+    //this._productname=pname || 'not found';
+    //alert("The product" + " " + pname + " " + "is available");
   }
+  else{
+    //alert("The product" + " " + pname + " " + "is not available");
+  }
+}
   //read
   get pname():string
   {

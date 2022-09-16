@@ -12,15 +12,14 @@
                     <div class="col-lg-7">
                         <div>
                             Product: {{prod.pname}}
-                            <br>
+                            <span (click)="showproductDetailsToggle()" [ngClass]="toggleContent()"></span>
+                        </div>
+                        <br>
+                        <div [hidden]="productDetail">
                             Description: {{prod.pdescription}}
                             <br>
                             Price: {{prod.price | currency:'INR'}}
-
-
                         </div>
-
-
                     </div>
 
 

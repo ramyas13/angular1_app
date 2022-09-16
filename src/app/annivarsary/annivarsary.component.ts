@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import * as productdetails from '../data/first.json';
+import * as annivarsary from '../data/annivarsary.json'
+
 @Component({
-  selector: 'app-extra',
-  templateUrl: './extra.component.html',
-  styleUrls: ['./extra.component.css']
+  selector: 'app-annivarsary',
+  templateUrl: './annivarsary.component.html',
+  styleUrls: ['./annivarsary.component.css']
 })
-export class ExtraComponent implements OnInit {
+export class AnnivarsaryComponent implements OnInit {
 
   constructor() { }
-  
+
   ngOnInit(): void {
   }
-  product:any = (productdetails as any).default;
+  //Fetch the data from refrigerator.json using the alias refrigerator in line nnumber 4
+  fridge:any=(annivarsary as any).default;
 
+  //Toggle effect to show and hide the pdescription and price
+  //Property for toggle effect
   productDetail=false;
   //Event to perform the toggle effect
   showproductDetailsToggle()
@@ -24,7 +28,7 @@ export class ExtraComponent implements OnInit {
   toggleContent(){
     var content='';
     if(this.productDetail){
-      content='fa fa-low-vision';
+      content='fa-solid fa-arrow-up';
     }
     else{
       content='fa-solid fa-arrow-down';

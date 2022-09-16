@@ -1,110 +1,28 @@
-<div class="container">
-  <div class="row">
-    <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card1.jpg" class="card-img-top" alt="...">
+<div *ngFor="let product of productDetails" style="float:left;">
+  <div class="container">
+    <div class="row">
+      <div class="col col-3 col-sm-6 col-md-3">
+  <div class="card"  style="width: 18rem; margin:50px;">
+    <img  [src]="product.image" class="prodimage">
     <div class="card-body">
-      <h5 [ngClass]="prod_array">Birthday Gift</h5>
-      <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-warning">Buy</a>
+     
+      <h5 style="font-size: 25px;color:rgb(35, 35, 168);"class="card-title">{{product.pname}}</h5>
+      <p [ngStyle]="{color:mycolor}" class="card-text">{{product.pdescription}}</p>
+
+      <div class="card-state" [ngSwitch]="product.status">
+      <p *ngSwitchCase="'Instock'" class="text-success">{{product.status}}</p>
+      <p *ngSwitchCase="'Out of Stock'" class="text-danger">{{product.status}}</p>
     </div>
-  </div>
-</div>
-  <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card2.jpg" height="190" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 [ngClass]="prod_array">Annivarsary Gift</h5>
-      <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-warning">Buy</a>
-    </div>
-  </div>
-</div>
-  <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card3.jpg" height="190" class="card-img-top" alt="...">
-    <div class="card-body">
-     <h5 [ngClass]="prod_array">Chocolates</h5>
-     <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-warning text-center">Buy</a>
-    </div>
-  </div>
-  </div>
-  <br><br>
-  <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card4.jpg" height="190" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 [ngClass]="prod_array">Plants</h5>
-      <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="#" class="btn btn-warning">Buy</a>
     </div>
   </div>
   </div>
-  <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card5.jpg" height="190" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 [ngClass]="prod_array">Cakes</h5>
-      <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-warning">Buy</a>
-    </div>
-  </div>
-  </div>
-  <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card6.jpg" height="190" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 [ngClass]="prod_array">Customize Gift</h5>
-      <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-warning">Buy</a>
-    </div>
-  </div>
-</div>
-  <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card7.jpg" height="190" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 [ngClass]="prod_array">Flowers</h5>
-      <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-warning">Buy</a>
-    </div>
-  </div>
-</div>
-  <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card8.jpg" height="190" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 [ngClass]="prod_array">Hampers</h5>
-      <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-warning">Buy</a>
-    </div>
-  </div>
-  </div>
-  <div class="col col-3 col-sm-6 col-md-3">
-  <div class="card" style="width: 18rem;">
-    <img src="assets/card9.jpg" height="190" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 [ngClass]="prod_array">Gifts for Babies</h5>
-      <p [ngStyle]="{color:mycolor}">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-warning">Buy</a>
-    </div>
   </div>
 </div>
 </div>
-</div>
-<br>
 
 <br>
 <br>
-<ul *ngFor="let pdetails of productdetails" [ngSwitch]="pdetails.status">
-  <li *ngSwitchCase="'Instock'" class="text-success">
-    {{pdetails.pid}} - {{pdetails.pname}} - {{pdetails.status}}
-  </li>
-  <li *ngSwitchCase="'Out of Stock'" class="text-danger">
-    {{pdetails.pid}} - {{pdetails.pname}} - {{pdetails.status}}
-  </li>
-  <li *ngSwitchDefault class="text-warning">
-    {{pdetails.pid}} - {{pdetails.pname}} - {{pdetails.status}}
-  </li>
-  </ul>
+
+
+
