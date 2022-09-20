@@ -14,13 +14,10 @@ export class ExtraComponent implements OnInit {
   product:any = (productdetails as any).default;
 
   productDetail=false;
-  //Event to perform the toggle effect
   showproductDetailsToggle()
   {
     this.productDetail=!this.productDetail;
   }
-  //function to toggle between the span content from + to - and vice versa
-  //and bind the function to [ngClass]
   toggleContent(){
     var content='';
     if(this.productDetail){

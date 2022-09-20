@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,7 +16,11 @@ import { AnnivarsaryComponent } from './annivarsary/annivarsary.component';
 import { AdvertisementComponent } from './advertisement/advertisement.component';
 import { DealsComponent } from './deals/deals.component';
 import { DealsdealComponent } from './deals/dealsdeal/dealsdeal.component';
-
+import { CounterComponent } from './counter/counter.component';
+import { CounterchildComponent } from './counter/counterchild/counterchild.component';
+import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
+import { MoreComponent } from './more/more.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +36,17 @@ import { DealsdealComponent } from './deals/dealsdeal/dealsdeal.component';
     AnnivarsaryComponent,
     AdvertisementComponent,
     DealsComponent,
-    DealsdealComponent
+    DealsdealComponent,
+    CounterComponent,
+    CounterchildComponent,
+    RegisterComponent,
+    MoreComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

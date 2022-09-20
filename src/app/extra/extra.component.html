@@ -7,7 +7,7 @@
             <div class="card-body col-lg-12">
                 <div class="row" style="border-style:solid;border-color:black;border-radius:15px;">
                     <div class="col-lg-7">
-                       <img [src]="prod.img" class="prodimage">
+                       <img [src]="prod.img" class="prodimages">
                     </div>
                     <div class="col-lg-7">
                         <div>
@@ -20,6 +20,8 @@
                             <br>
                             Price: {{prod.price | currency:'INR'}}
                         </div>
+                        <br>
+                <app-counter></app-counter>
                     </div>
 
 

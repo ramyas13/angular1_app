@@ -10,9 +10,9 @@
     width:287px;
 }
 .card{
-    border-radius: 5px 10px 15px;
+    border-radius: 10px 20px 30px;
     box-shadow: 2px 4px 2px;
-    border-width: 2px,3px,4px;
+    border-width: 5px 8px 10px;
     background-color: rgba(145, 236, 203, 0.372);
     
 }
