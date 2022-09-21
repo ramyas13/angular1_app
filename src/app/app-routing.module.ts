@@ -9,8 +9,12 @@ import { BirthdaysComponent } from './birthdays/birthdays.component';
 import { DealsdealComponent } from './deals/dealsdeal/dealsdeal.component';
 import { RegisterComponent } from './register/register.component';
 import { MoreComponent } from './more/more.component';
-
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { AssignComponent } from './assign/assign.component';
+import { LoginComponent } from './login/login.component';
+import { CartitemsComponent } from './cartitems/cartitems.component';
 const routes: Routes = [
+  {path:'login',component:LoginComponent},
   {path:'',component:CarouselComponent},
   {path:'cards',component:CardsComponent},
   {path:'query',component:QueryComponent},
@@ -20,6 +24,9 @@ const routes: Routes = [
   {path:'deals',component:DealsdealComponent},
   {path:'register',component:RegisterComponent},
   {path:'more',component:MoreComponent},
+  {path:'product',component:ProductdetailsComponent},
+  {path:'assign',component:AssignComponent},
+  {path:'cartitem',component:CartitemsComponent},
   
   
 

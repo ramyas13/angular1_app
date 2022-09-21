@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +21,11 @@ import { CounterComponent } from './counter/counter.component';
 import { CounterchildComponent } from './counter/counterchild/counterchild.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
-import { MoreComponent } from './more/more.component'; 
+import { MoreComponent } from './more/more.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { AssignComponent } from './assign/assign.component';
+import { LoginComponent } from './login/login.component';
+import { CartitemsComponent } from './cartitems/cartitems.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,13 +45,19 @@ import { MoreComponent } from './more/more.component';
     CounterComponent,
     CounterchildComponent,
     RegisterComponent,
-    MoreComponent
+    MoreComponent,
+    ProductdetailsComponent,
+    AssignComponent,
+    LoginComponent,
+    CartitemsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

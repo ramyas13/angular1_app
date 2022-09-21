@@ -1,0 +1,15 @@
+.text{
+   text-align: center;
+    background-color: aquamarine;
+
+}
+.col{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-decoration: dotted;
+    
+}
+.container{
+    background-color: blanchedalmond;
+}
