@@ -23,6 +23,7 @@ export class ProductdetailsComponent implements OnInit {
 
   submitted = false;
   constructor(private formbuilder: FormBuilder,private route: Router, private http: HttpClient, private api:ProductapiService) { }
+  
   get f() { return this.formValue.controls; }
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
